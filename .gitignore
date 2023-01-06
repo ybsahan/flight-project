@@ -130,6 +130,11 @@ dmypy.json
 
 #others
 airflow
+<<<<<<< HEAD
 .venv
 .idea
 __pycache__
+=======
+venv
+.idea
+>>>>>>> 66289a8a289854812b9659f1ca3fe26bf18781a1
