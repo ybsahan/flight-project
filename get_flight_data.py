@@ -1,9 +1,5 @@
 import requests, os
 
-
-# appId = '6dee5e2b'
-# appKey = 'f45711fcf0e64053197b464a3f7efb37'
-#
 # # Set the parameters for the API request
 # airport = 'IST'  # The IATA code for Istanbul Airport
 # year = 2023  # The year
@@ -13,8 +9,6 @@ import requests, os
 
 
 def get_flight_data(airport: str, year: int, month: int, day: int, hour: int):
-    # appid = '6dee5e2b'
-    # appkey = 'f45711fcf0e64053197b464a3f7efb37'
     appid = os.getenv("APP_ID")
     appkey = os.getenv("APP_KEY")
 
