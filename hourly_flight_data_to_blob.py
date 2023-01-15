@@ -1,8 +1,7 @@
 from datetime import datetime, timedelta
 import json
-import os
 import requests
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from azure.storage.blob import BlobServiceClient
 
 from airflow import DAG
