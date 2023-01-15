@@ -3,14 +3,13 @@ import json
 import requests
 from airflow.operators.python import PythonOperator
 from azure.storage.blob import BlobServiceClient
-
 from airflow import DAG
 from airflow.models import Variable
 
 # Define default_args dictionary to pass to DAG
 default_args = {
-    'owner': 'me',
-    'start_date': datetime(2023, 1, 9, 0, 0),
+    'owner': 'Bahadir.Sahan',
+    'start_date': datetime(2023, 1, 15, 21, 0),
     'depends_on_past': True,
     'retries': 3,
     'retry_delay': timedelta(minutes=5),
@@ -79,7 +78,7 @@ def insert_data_into_bs( blob_name: str, container_name: str, **kwargs) -> objec
 
 # Create a DAG instance
 dag = DAG(
-    'hourly_retrieve_flight_data',
+    'hourly_retrieve_flight_data_dag',
     default_args=default_args,
     schedule_interval="0 * * * *",
 )
